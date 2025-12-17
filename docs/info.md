@@ -7,6 +7,9 @@ You can also include images in this folder and reference them in the markdown. E
 512 kb in size, and the combined size of all images must be less than 1 MB.
 -->
 
+coNTADOR DE 8 BITS CON SEñal de reset en bajo y una señal de enable en alto
+
+
 ## How it works
 
 Explain how your project works
