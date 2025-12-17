@@ -11,13 +11,12 @@ coNTADOR DE 8 BITS CON SEñal de reset en bajo y una señal de enable en alto
 
 
 ## How it works
-
-Explain how your project works
+Un contador, cuenta, cuando esta habilitado
 
 ## How to test
-
-Explain how to use your project
+No olvides llenar tambien esta parte
 
 ## External hardware
 
 List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Aqui pondrias toda la circuiteria adicional para probar tu circuito
