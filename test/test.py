@@ -1,7 +1,7 @@
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import ClockCycles
-#from cocotb.result import TestFailure
+from cocotb.result import TestFailure
 
 clk_period = 100  # ns -> 100 MHz
 
@@ -55,8 +55,8 @@ async def test_counter_enable_260(dut):
 
     #dut._log.info(f"Valor esperado: {expected}, observado: {observed}")
 
-    #if observed != expected:
-        #raise TestFailure(f"Error en conteo con enable=1. Esperado={expected}, Observado={observed}")
+    if observed != expected:
+        raise TestFailure(f"Error en conteo con enable=1. Esperado={expected}, Observado={observed}")
 
     dut._log.info("✔ Enable funcionando correctamente")
 
@@ -87,8 +87,8 @@ async def test_counter_enable(dut):
 
     dut._log.info(f"Valor esperado: {expected}, observado: {observed}")
 
-    #if observed != expected:
-    #    raise TestFailure(f"Error en conteo con enable=1. Esperado={expected}, Observado={observed}")
+    if observed != expected:
+        raise TestFailure(f"Error en conteo con enable=1. Esperado={expected}, Observado={observed}")
 
     dut._log.info("✔ Enable funcionando correctamente")
 
@@ -124,7 +124,7 @@ async def test_counter_disable(dut):
 
     dut._log.info(f"Valor previo: {prev_value}, observado después de disable: {observed}")
 
-    #if observed != prev_value:
-    #    raise TestFailure("Error: el contador cambió aunque enable=0")
+    if observed != prev_value:
+        raise TestFailure("Error: el contador cambió aunque enable=0")
 
     dut._log.info("✔ Disable funcionando correctamente")
